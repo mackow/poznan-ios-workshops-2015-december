@@ -1,0 +1,71 @@
+{
+    "id": "430d0a00f964a5203e271fe3",
+    "name": "Brooklyn Bridge Park",
+    "contact": {
+        "phone": "+12128033822",
+        "formattedPhone": "+1 212-803-3822",
+        "twitter": "nycparks",
+        "facebook": "104475634308",
+        "facebookUsername": "BartowPell",
+        "facebookName": "Bartow-Pell Mansion Museum"
+    },
+    "location": {
+        "address": "Main St",
+        "crossStreet": "Plymouth St",
+        "lat": 40.70227697066692,
+        "lng": -73.9965033531189,
+        "distance": 389,
+        "postalCode": "11201",
+        "cc": "US",
+        "city": "Brooklyn",
+        "state": "NY",
+        "country": "Stany Zjednoczone",
+        "formattedAddress": [
+            "Main St (Plymouth St)",
+            "Brooklyn, NY 11201",
+            "Stany Zjednoczone"
+        ]
+    },
+    "categories": [
+        {
+            "id": "4bf58dd8d48988d163941735",
+            "name": "Park",
+            "pluralName": "Parks",
+            "shortName": "Park",
+            "icon": {
+                "prefix": "https://ss3.4sqi.net/img/categories_v2/parks_outdoors/park_",
+                "suffix": ".png"
+            },
+            "primary": true
+        }
+    ],
+    "verified": true,
+    "stats": {
+        "checkinsCount": 38224,
+        "usersCount": 23365,
+        "tipCount": 242
+    },
+    "url": "http://nyc.gov/parks",
+    "specials": {
+        "count": 0,
+        "items": []
+    },
+    "hereNow": {
+        "count": 1,
+        "summary": "One other person is here",
+        "groups": [
+            {
+                "type": "others",
+                "name": "Other people here",
+                "count": 1,
+                "items": []
+            }
+        ]
+    },
+    "referralId": "v-1447420390",
+    "venueChains": [
+        {
+            "id": "556df7e1a7c82e6b724d822e"
+        }
+    ]
+}

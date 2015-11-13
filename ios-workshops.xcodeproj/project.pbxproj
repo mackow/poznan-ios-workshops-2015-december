@@ -1,0 +1,788 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3A8167B11BF42A9A003683BD /* NGWCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A8167B01BF42A9A003683BD /* NGWCategory.m */; };
+		3A8349C51BF6128D0051CC5A /* NGWAPIClientSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A8349C41BF6128D0051CC5A /* NGWAPIClientSpec.m */; };
+		3A8349C61BF614970051CC5A /* NGWCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A8167B01BF42A9A003683BD /* NGWCategory.m */; };
+		3A8349C71BF614990051CC5A /* NGWVenue.m in Sources */ = {isa = PBXBuildFile; fileRef = E121E47F1BED59670094C2AB /* NGWVenue.m */; };
+		3A8349C81BF6149D0051CC5A /* NGWAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A8FF4FD1BECFCDC00CBEB25 /* NGWAPIClient.m */; };
+		3A8349CA1BF6188D0051CC5A /* NGWVenueSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A8349C91BF6188D0051CC5A /* NGWVenueSpec.m */; };
+		3A8349CC1BF6194B0051CC5A /* Venue.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A8349CB1BF6194B0051CC5A /* Venue.json */; };
+		3A8349CE1BF61B470051CC5A /* Venue.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A8349CB1BF6194B0051CC5A /* Venue.json */; };
+		3A8349D11BF622B10051CC5A /* NGWCategorySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A8349D01BF622B10051CC5A /* NGWCategorySpec.m */; };
+		3A8FF4FE1BECFCDC00CBEB25 /* NGWAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A8FF4FD1BECFCDC00CBEB25 /* NGWAPIClient.m */; };
+		4CFB18452B05C7689F5A9A4D /* Pods_ios_workshops.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A310A73DD1F2B382725CC988 /* Pods_ios_workshops.framework */; };
+		5E43FBEB1BF409E400C7DA25 /* NGWGeocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E43FBEA1BF409E400C7DA25 /* NGWGeocoder.m */; };
+		5E43FBED1BF4123800C7DA25 /* NGWGeocoderSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E43FBEC1BF4123800C7DA25 /* NGWGeocoderSpec.m */; };
+		5E43FBF01BF4D6D000C7DA25 /* NGWLocationRetriever.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E43FBEF1BF4D6D000C7DA25 /* NGWLocationRetriever.m */; };
+		5E43FBF21BF5303D00C7DA25 /* NGWMapAnnotationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E43FBF11BF5303D00C7DA25 /* NGWMapAnnotationSpec.m */; };
+		5ED8FB1E1BF0AC1C00A0793F /* NGWMapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED8FB1D1BF0AC1C00A0793F /* NGWMapAnnotation.m */; };
+		5ED8FB221BF0C2E200A0793F /* NGWLocationFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED8FB211BF0C2E200A0793F /* NGWLocationFormatter.m */; };
+		E121E4011BE79E450094C2AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E121E4001BE79E450094C2AB /* main.m */; };
+		E121E4041BE79E450094C2AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E121E4031BE79E450094C2AB /* AppDelegate.m */; };
+		E121E40D1BE79E450094C2AB /* ios_workshops.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E121E40B1BE79E450094C2AB /* ios_workshops.xcdatamodeld */; };
+		E121E40F1BE79E450094C2AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E121E40E1BE79E450094C2AB /* Assets.xcassets */; };
+		E121E4121BE79E450094C2AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E121E4101BE79E450094C2AB /* LaunchScreen.storyboard */; };
+		E121E44A1BEB83160094C2AB /* NGWLocationsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E121E43F1BEB83160094C2AB /* NGWLocationsListViewController.m */; };
+		E121E44B1BEB83160094C2AB /* NGWLocationsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E121E43F1BEB83160094C2AB /* NGWLocationsListViewController.m */; };
+		E121E44C1BEB83160094C2AB /* NGWMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E121E4441BEB83160094C2AB /* NGWMapViewController.m */; };
+		E121E44D1BEB83160094C2AB /* NGWMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E121E4441BEB83160094C2AB /* NGWMapViewController.m */; };
+		E121E44E1BEB83160094C2AB /* NGWRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E121E4491BEB83160094C2AB /* NGWRootViewController.m */; };
+		E121E44F1BEB83160094C2AB /* NGWRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E121E4491BEB83160094C2AB /* NGWRootViewController.m */; };
+		E121E4801BED59670094C2AB /* NGWVenue.m in Sources */ = {isa = PBXBuildFile; fileRef = E121E47F1BED59670094C2AB /* NGWVenue.m */; };
+		E1B052451BF0BEAA00E56BBF /* NGWCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B052441BF0BEAA00E56BBF /* NGWCoreDataStack.m */; };
+		E1B052461BF0BEAA00E56BBF /* NGWCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B052441BF0BEAA00E56BBF /* NGWCoreDataStack.m */; };
+		E1B052491BF0D64300E56BBF /* NGWLocationListManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B052481BF0D64300E56BBF /* NGWLocationListManager.m */; };
+		E1B0524A1BF0D64300E56BBF /* NGWLocationListManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B052481BF0D64300E56BBF /* NGWLocationListManager.m */; };
+		E1D586951BF4ABB500461193 /* NGWLocationListManagerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D586931BF4ABB500461193 /* NGWLocationListManagerSpec.m */; };
+		E85A64D84055BB7A88C8EBEA /* Pods_ios_workshopsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D52493212E37AD064DD1CC59 /* Pods_ios_workshopsTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E121E4191BE79E450094C2AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E121E3F41BE79E450094C2AB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E121E3FB1BE79E450094C2AB;
+			remoteInfo = "ios-workshops";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		006B97782A1757CDEBE5E82C /* Pods-ios-workshopsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-workshopsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios-workshopsTests/Pods-ios-workshopsTests.release.xcconfig"; sourceTree = "<group>"; };
+		3A8167AF1BF42A9A003683BD /* NGWCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGWCategory.h; sourceTree = "<group>"; };
+		3A8167B01BF42A9A003683BD /* NGWCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGWCategory.m; sourceTree = "<group>"; };
+		3A8349C41BF6128D0051CC5A /* NGWAPIClientSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGWAPIClientSpec.m; sourceTree = "<group>"; };
+		3A8349C91BF6188D0051CC5A /* NGWVenueSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGWVenueSpec.m; sourceTree = "<group>"; };
+		3A8349CB1BF6194B0051CC5A /* Venue.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Venue.json; sourceTree = "<group>"; };
+		3A8349D01BF622B10051CC5A /* NGWCategorySpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGWCategorySpec.m; sourceTree = "<group>"; };
+		3A8FF4FC1BECFCDC00CBEB25 /* NGWAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGWAPIClient.h; sourceTree = "<group>"; };
+		3A8FF4FD1BECFCDC00CBEB25 /* NGWAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGWAPIClient.m; sourceTree = "<group>"; };
+		5E43FBE91BF409E400C7DA25 /* NGWGeocoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGWGeocoder.h; sourceTree = "<group>"; };
+		5E43FBEA1BF409E400C7DA25 /* NGWGeocoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGWGeocoder.m; sourceTree = "<group>"; };
+		5E43FBEC1BF4123800C7DA25 /* NGWGeocoderSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGWGeocoderSpec.m; sourceTree = "<group>"; };
+		5E43FBEE1BF4D6D000C7DA25 /* NGWLocationRetriever.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGWLocationRetriever.h; sourceTree = "<group>"; };
+		5E43FBEF1BF4D6D000C7DA25 /* NGWLocationRetriever.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGWLocationRetriever.m; sourceTree = "<group>"; };
+		5E43FBF11BF5303D00C7DA25 /* NGWMapAnnotationSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGWMapAnnotationSpec.m; sourceTree = "<group>"; };
+		5ED8FB1C1BF0AC1C00A0793F /* NGWMapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGWMapAnnotation.h; path = Models/NGWMapAnnotation.h; sourceTree = "<group>"; };
+		5ED8FB1D1BF0AC1C00A0793F /* NGWMapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGWMapAnnotation.m; path = Models/NGWMapAnnotation.m; sourceTree = "<group>"; };
+		5ED8FB201BF0C2E200A0793F /* NGWLocationFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGWLocationFormatter.h; path = Formatters/NGWLocationFormatter.h; sourceTree = "<group>"; };
+		5ED8FB211BF0C2E200A0793F /* NGWLocationFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGWLocationFormatter.m; path = Formatters/NGWLocationFormatter.m; sourceTree = "<group>"; };
+		7DECC0CBE19C7057162FEA56 /* Pods-ios-workshops.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-workshops.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios-workshops/Pods-ios-workshops.release.xcconfig"; sourceTree = "<group>"; };
+		8B5761C1DA0F4FBBB868A8F0 /* Pods-ios-workshops.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-workshops.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios-workshops/Pods-ios-workshops.debug.xcconfig"; sourceTree = "<group>"; };
+		A310A73DD1F2B382725CC988 /* Pods_ios_workshops.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_workshops.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8EDAE9FD518BBA7D63C6474 /* Pods-ios-workshopsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-workshopsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios-workshopsTests/Pods-ios-workshopsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D52493212E37AD064DD1CC59 /* Pods_ios_workshopsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_workshopsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E121E3FC1BE79E450094C2AB /* ios-workshops.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-workshops.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E121E4001BE79E450094C2AB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E121E4021BE79E450094C2AB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
+		E121E4031BE79E450094C2AB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
+		E121E40C1BE79E450094C2AB /* ios_workshops.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ios_workshops.xcdatamodel; sourceTree = "<group>"; };
+		E121E40E1BE79E450094C2AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E121E4111BE79E450094C2AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E121E4131BE79E450094C2AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E121E4181BE79E450094C2AB /* ios-workshopsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-workshopsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E121E41E1BE79E450094C2AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E121E43E1BEB83160094C2AB /* NGWLocationsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGWLocationsListViewController.h; sourceTree = "<group>"; };
+		E121E43F1BEB83160094C2AB /* NGWLocationsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGWLocationsListViewController.m; sourceTree = "<group>"; };
+		E121E4431BEB83160094C2AB /* NGWMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGWMapViewController.h; sourceTree = "<group>"; };
+		E121E4441BEB83160094C2AB /* NGWMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGWMapViewController.m; sourceTree = "<group>"; };
+		E121E4481BEB83160094C2AB /* NGWRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGWRootViewController.h; sourceTree = "<group>"; };
+		E121E4491BEB83160094C2AB /* NGWRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGWRootViewController.m; sourceTree = "<group>"; };
+		E121E47E1BED59670094C2AB /* NGWVenue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGWVenue.h; sourceTree = "<group>"; };
+		E121E47F1BED59670094C2AB /* NGWVenue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGWVenue.m; sourceTree = "<group>"; };
+		E1B052431BF0BEAA00E56BBF /* NGWCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGWCoreDataStack.h; sourceTree = "<group>"; };
+		E1B052441BF0BEAA00E56BBF /* NGWCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGWCoreDataStack.m; sourceTree = "<group>"; };
+		E1B052471BF0D64300E56BBF /* NGWLocationListManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGWLocationListManager.h; sourceTree = "<group>"; };
+		E1B052481BF0D64300E56BBF /* NGWLocationListManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGWLocationListManager.m; sourceTree = "<group>"; };
+		E1D586931BF4ABB500461193 /* NGWLocationListManagerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGWLocationListManagerSpec.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E121E3F91BE79E450094C2AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CFB18452B05C7689F5A9A4D /* Pods_ios_workshops.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E121E4151BE79E450094C2AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E85A64D84055BB7A88C8EBEA /* Pods_ios_workshopsTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3A8349CD1BF619EC0051CC5A /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				3A8349CB1BF6194B0051CC5A /* Venue.json */,
+			);
+			path = Fixtures;
+			sourceTree = "<group>";
+		};
+		3A8FF4FB1BECFCAB00CBEB25 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				3A8FF4FC1BECFCDC00CBEB25 /* NGWAPIClient.h */,
+				3A8FF4FD1BECFCDC00CBEB25 /* NGWAPIClient.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		46B6930989C0AAD9F89DBDCF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A310A73DD1F2B382725CC988 /* Pods_ios_workshops.framework */,
+				D52493212E37AD064DD1CC59 /* Pods_ios_workshopsTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5ED8FB231BF0C2E500A0793F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5ED8FB201BF0C2E200A0793F /* NGWLocationFormatter.h */,
+				5ED8FB211BF0C2E200A0793F /* NGWLocationFormatter.m */,
+				5E43FBE91BF409E400C7DA25 /* NGWGeocoder.h */,
+				5E43FBEA1BF409E400C7DA25 /* NGWGeocoder.m */,
+				5E43FBEE1BF4D6D000C7DA25 /* NGWLocationRetriever.h */,
+				5E43FBEF1BF4D6D000C7DA25 /* NGWLocationRetriever.m */,
+				5ED8FB1C1BF0AC1C00A0793F /* NGWMapAnnotation.h */,
+				5ED8FB1D1BF0AC1C00A0793F /* NGWMapAnnotation.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		E121E3F31BE79E450094C2AB = {
+			isa = PBXGroup;
+			children = (
+				E121E3FE1BE79E450094C2AB /* ios-workshops */,
+				E121E41B1BE79E450094C2AB /* ios-workshopsTests */,
+				E121E3FD1BE79E450094C2AB /* Products */,
+				F6166F905A07DF6816E33D3D /* Pods */,
+				46B6930989C0AAD9F89DBDCF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E121E3FD1BE79E450094C2AB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E121E3FC1BE79E450094C2AB /* ios-workshops.app */,
+				E121E4181BE79E450094C2AB /* ios-workshopsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E121E3FE1BE79E450094C2AB /* ios-workshops */ = {
+			isa = PBXGroup;
+			children = (
+				E121E42A1BE9556F0094C2AB /* Modules */,
+				E121E4021BE79E450094C2AB /* AppDelegate.h */,
+				E121E4031BE79E450094C2AB /* AppDelegate.m */,
+				E121E40E1BE79E450094C2AB /* Assets.xcassets */,
+				E121E4101BE79E450094C2AB /* LaunchScreen.storyboard */,
+				E121E4131BE79E450094C2AB /* Info.plist */,
+				E121E40B1BE79E450094C2AB /* ios_workshops.xcdatamodeld */,
+				E121E3FF1BE79E450094C2AB /* Supporting Files */,
+			);
+			path = "ios-workshops";
+			sourceTree = "<group>";
+		};
+		E121E3FF1BE79E450094C2AB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E121E4001BE79E450094C2AB /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E121E41B1BE79E450094C2AB /* ios-workshopsTests */ = {
+			isa = PBXGroup;
+			children = (
+				3A8349CD1BF619EC0051CC5A /* Fixtures */,
+				3A8349C41BF6128D0051CC5A /* NGWAPIClientSpec.m */,
+				3A8349D01BF622B10051CC5A /* NGWCategorySpec.m */,
+				5E43FBEC1BF4123800C7DA25 /* NGWGeocoderSpec.m */,
+				5E43FBF11BF5303D00C7DA25 /* NGWMapAnnotationSpec.m */,
+				E1D586931BF4ABB500461193 /* NGWLocationListManagerSpec.m */,
+				3A8349C91BF6188D0051CC5A /* NGWVenueSpec.m */,
+				E121E41E1BE79E450094C2AB /* Info.plist */,
+			);
+			path = "ios-workshopsTests";
+			sourceTree = "<group>";
+		};
+		E121E42A1BE9556F0094C2AB /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				E121E47C1BED59670094C2AB /* Common */,
+				E121E43B1BEB83160094C2AB /* LocationList */,
+				E121E4401BEB83160094C2AB /* Map */,
+				3A8FF4FB1BECFCAB00CBEB25 /* Network */,
+				E121E4451BEB83160094C2AB /* Root */,
+			);
+			name = Modules;
+			path = Classes/Modules;
+			sourceTree = "<group>";
+		};
+		E121E43B1BEB83160094C2AB /* LocationList */ = {
+			isa = PBXGroup;
+			children = (
+				E121E43C1BEB83160094C2AB /* Delegates */,
+				E121E43D1BEB83160094C2AB /* ViewControllers */,
+			);
+			path = LocationList;
+			sourceTree = "<group>";
+		};
+		E121E43C1BEB83160094C2AB /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				E1B052471BF0D64300E56BBF /* NGWLocationListManager.h */,
+				E1B052481BF0D64300E56BBF /* NGWLocationListManager.m */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		E121E43D1BEB83160094C2AB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E121E43E1BEB83160094C2AB /* NGWLocationsListViewController.h */,
+				E121E43F1BEB83160094C2AB /* NGWLocationsListViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E121E4401BEB83160094C2AB /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				5ED8FB231BF0C2E500A0793F /* Helpers */,
+				E121E4421BEB83160094C2AB /* ViewControllers */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		E121E4421BEB83160094C2AB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E121E4431BEB83160094C2AB /* NGWMapViewController.h */,
+				E121E4441BEB83160094C2AB /* NGWMapViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E121E4451BEB83160094C2AB /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				E121E4471BEB83160094C2AB /* ViewControllers */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		E121E4471BEB83160094C2AB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E121E4481BEB83160094C2AB /* NGWRootViewController.h */,
+				E121E4491BEB83160094C2AB /* NGWRootViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E121E47C1BED59670094C2AB /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E1B052421BF0BE8800E56BBF /* CoreData */,
+				E121E47D1BED59670094C2AB /* Models */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		E121E47D1BED59670094C2AB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3A8167AF1BF42A9A003683BD /* NGWCategory.h */,
+				3A8167B01BF42A9A003683BD /* NGWCategory.m */,
+				E121E47E1BED59670094C2AB /* NGWVenue.h */,
+				E121E47F1BED59670094C2AB /* NGWVenue.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E1B052421BF0BE8800E56BBF /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				E1B052431BF0BEAA00E56BBF /* NGWCoreDataStack.h */,
+				E1B052441BF0BEAA00E56BBF /* NGWCoreDataStack.m */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		F6166F905A07DF6816E33D3D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8B5761C1DA0F4FBBB868A8F0 /* Pods-ios-workshops.debug.xcconfig */,
+				7DECC0CBE19C7057162FEA56 /* Pods-ios-workshops.release.xcconfig */,
+				B8EDAE9FD518BBA7D63C6474 /* Pods-ios-workshopsTests.debug.xcconfig */,
+				006B97782A1757CDEBE5E82C /* Pods-ios-workshopsTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E121E3FB1BE79E450094C2AB /* ios-workshops */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E121E4211BE79E450094C2AB /* Build configuration list for PBXNativeTarget "ios-workshops" */;
+			buildPhases = (
+				6F3BC4C018DB70BEEA0F3856 /* Check Pods Manifest.lock */,
+				E121E3F81BE79E450094C2AB /* Sources */,
+				E121E3F91BE79E450094C2AB /* Frameworks */,
+				E121E3FA1BE79E450094C2AB /* Resources */,
+				963F8EEB332BF44DFD43741F /* Embed Pods Frameworks */,
+				C11BB7D4642782F666B07F1C /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ios-workshops";
+			productName = "ios-workshops";
+			productReference = E121E3FC1BE79E450094C2AB /* ios-workshops.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E121E4171BE79E450094C2AB /* ios-workshopsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E121E4241BE79E450094C2AB /* Build configuration list for PBXNativeTarget "ios-workshopsTests" */;
+			buildPhases = (
+				3B8718278652F7212637D09E /* Check Pods Manifest.lock */,
+				E121E4141BE79E450094C2AB /* Sources */,
+				E121E4151BE79E450094C2AB /* Frameworks */,
+				E121E4161BE79E450094C2AB /* Resources */,
+				2BF51F036E86E8031D50A0C2 /* Embed Pods Frameworks */,
+				E3A3C43931CAC3B2BE553868 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E121E41A1BE79E450094C2AB /* PBXTargetDependency */,
+			);
+			name = "ios-workshopsTests";
+			productName = "ios-workshopsTests";
+			productReference = E121E4181BE79E450094C2AB /* ios-workshopsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E121E3F41BE79E450094C2AB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = NGW;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = Netguru;
+				TargetAttributes = {
+					E121E3FB1BE79E450094C2AB = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 9HJ69C5G9K;
+					};
+					E121E4171BE79E450094C2AB = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = E121E3FB1BE79E450094C2AB;
+					};
+				};
+			};
+			buildConfigurationList = E121E3F71BE79E450094C2AB /* Build configuration list for PBXProject "ios-workshops" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E121E3F31BE79E450094C2AB;
+			productRefGroup = E121E3FD1BE79E450094C2AB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E121E3FB1BE79E450094C2AB /* ios-workshops */,
+				E121E4171BE79E450094C2AB /* ios-workshopsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E121E3FA1BE79E450094C2AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E121E4121BE79E450094C2AB /* LaunchScreen.storyboard in Resources */,
+				E121E40F1BE79E450094C2AB /* Assets.xcassets in Resources */,
+				3A8349CE1BF61B470051CC5A /* Venue.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E121E4161BE79E450094C2AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A8349CC1BF6194B0051CC5A /* Venue.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2BF51F036E86E8031D50A0C2 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ios-workshopsTests/Pods-ios-workshopsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3B8718278652F7212637D09E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6F3BC4C018DB70BEEA0F3856 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		963F8EEB332BF44DFD43741F /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ios-workshops/Pods-ios-workshops-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C11BB7D4642782F666B07F1C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ios-workshops/Pods-ios-workshops-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3A3C43931CAC3B2BE553868 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ios-workshopsTests/Pods-ios-workshopsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E121E3F81BE79E450094C2AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5ED8FB221BF0C2E200A0793F /* NGWLocationFormatter.m in Sources */,
+				5ED8FB1E1BF0AC1C00A0793F /* NGWMapAnnotation.m in Sources */,
+				5E43FBF01BF4D6D000C7DA25 /* NGWLocationRetriever.m in Sources */,
+				E121E44C1BEB83160094C2AB /* NGWMapViewController.m in Sources */,
+				5E43FBEB1BF409E400C7DA25 /* NGWGeocoder.m in Sources */,
+				3A8167B11BF42A9A003683BD /* NGWCategory.m in Sources */,
+				E121E44A1BEB83160094C2AB /* NGWLocationsListViewController.m in Sources */,
+				E121E40D1BE79E450094C2AB /* ios_workshops.xcdatamodeld in Sources */,
+				E1B052491BF0D64300E56BBF /* NGWLocationListManager.m in Sources */,
+				E121E4041BE79E450094C2AB /* AppDelegate.m in Sources */,
+				E121E4801BED59670094C2AB /* NGWVenue.m in Sources */,
+				E1B052451BF0BEAA00E56BBF /* NGWCoreDataStack.m in Sources */,
+				E121E4011BE79E450094C2AB /* main.m in Sources */,
+				3A8FF4FE1BECFCDC00CBEB25 /* NGWAPIClient.m in Sources */,
+				E121E44E1BEB83160094C2AB /* NGWRootViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E121E4141BE79E450094C2AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1B052461BF0BEAA00E56BBF /* NGWCoreDataStack.m in Sources */,
+				3A8349C71BF614990051CC5A /* NGWVenue.m in Sources */,
+				3A8349CA1BF6188D0051CC5A /* NGWVenueSpec.m in Sources */,
+				3A8349C81BF6149D0051CC5A /* NGWAPIClient.m in Sources */,
+				3A8349C51BF6128D0051CC5A /* NGWAPIClientSpec.m in Sources */,
+				E121E44B1BEB83160094C2AB /* NGWLocationsListViewController.m in Sources */,
+				5E43FBF21BF5303D00C7DA25 /* NGWMapAnnotationSpec.m in Sources */,
+				3A8349C61BF614970051CC5A /* NGWCategory.m in Sources */,
+				E121E44F1BEB83160094C2AB /* NGWRootViewController.m in Sources */,
+				E1B0524A1BF0D64300E56BBF /* NGWLocationListManager.m in Sources */,
+				E121E44D1BEB83160094C2AB /* NGWMapViewController.m in Sources */,
+				5E43FBED1BF4123800C7DA25 /* NGWGeocoderSpec.m in Sources */,
+				E1D586951BF4ABB500461193 /* NGWLocationListManagerSpec.m in Sources */,
+				3A8349D11BF622B10051CC5A /* NGWCategorySpec.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E121E41A1BE79E450094C2AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E121E3FB1BE79E450094C2AB /* ios-workshops */;
+			targetProxy = E121E4191BE79E450094C2AB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E121E4101BE79E450094C2AB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E121E4111BE79E450094C2AB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E121E41F1BE79E450094C2AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E121E4201BE79E450094C2AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E121E4221BE79E450094C2AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B5761C1DA0F4FBBB868A8F0 /* Pods-ios-workshops.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "ios-workshops/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.netguru.internal.ios-workshops";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		E121E4231BE79E450094C2AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DECC0CBE19C7057162FEA56 /* Pods-ios-workshops.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "ios-workshops/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.netguru.internal.ios-workshops";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		E121E4251BE79E450094C2AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8EDAE9FD518BBA7D63C6474 /* Pods-ios-workshopsTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "ios-workshopsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.netguru.internal.ios-workshopsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ios-workshops.app/ios-workshops";
+			};
+			name = Debug;
+		};
+		E121E4261BE79E450094C2AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 006B97782A1757CDEBE5E82C /* Pods-ios-workshopsTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "ios-workshopsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.netguru.internal.ios-workshopsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ios-workshops.app/ios-workshops";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E121E3F71BE79E450094C2AB /* Build configuration list for PBXProject "ios-workshops" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E121E41F1BE79E450094C2AB /* Debug */,
+				E121E4201BE79E450094C2AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E121E4211BE79E450094C2AB /* Build configuration list for PBXNativeTarget "ios-workshops" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E121E4221BE79E450094C2AB /* Debug */,
+				E121E4231BE79E450094C2AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E121E4241BE79E450094C2AB /* Build configuration list for PBXNativeTarget "ios-workshopsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E121E4251BE79E450094C2AB /* Debug */,
+				E121E4261BE79E450094C2AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E121E40B1BE79E450094C2AB /* ios_workshops.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E121E40C1BE79E450094C2AB /* ios_workshops.xcdatamodel */,
+			);
+			currentVersion = E121E40C1BE79E450094C2AB /* ios_workshops.xcdatamodel */;
+			path = ios_workshops.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E121E3F41BE79E450094C2AB /* Project object */;
+}
