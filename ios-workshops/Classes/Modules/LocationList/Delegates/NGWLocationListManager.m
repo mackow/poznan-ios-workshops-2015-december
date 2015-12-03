@@ -9,6 +9,7 @@
 #import "NGWLocationListManager.h"
 
 #import "NGWVenue.h"
+#import "NGWVenueCell.h"
 
 @interface NGWLocationListManager ()
 @property (strong, nonatomic, nullable) NSArray<NGWVenue *> *locations;
@@ -23,6 +24,7 @@
     self = [super init];
     if (self) {
         _collectionView = collectionView;
+        [self.collectionView registerClass:[NGWVenueCell class] forCellWithReuseIdentifier:@"VenueCell"];
     }
     return self;
 }
@@ -43,7 +45,15 @@
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell;
+    NGWVenueCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"VenueCell" forIndexPath:indexPath];
+    cell.venue = [self.locations objectAtIndex:indexPath.row];
     return cell;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView
+                  layout:(UICollectionViewLayout *)collectionViewLayout
+  sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    return CGSizeMake(150.0f, 50.0f);
 }
 @end
