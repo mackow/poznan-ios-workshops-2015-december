@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NGWLocationsListViewController : UIViewController
+@class NGWVenue;
 
+@interface NGWLocationsListViewController : UIViewController
+/// Updates venue objects and reloads view
+///
+/// @param locations Array of NGWVenue objects that should be displayed
+///
+- (void)updateCollectionWithItems:(NSArray <NGWVenue *> *)locations;
 @end

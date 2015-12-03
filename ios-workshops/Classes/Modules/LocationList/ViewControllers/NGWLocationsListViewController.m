@@ -21,6 +21,12 @@
 
 @implementation NGWLocationsListViewController
 
+#pragma mark - Public 
+
+- (void)updateCollectionWithItems:(NSArray <NGWVenue *> *)locations {
+    [self.locationListManager updateCollectionWithItems:locations];
+}
+
 #pragma mark - Lifecycle
 - (void)viewDidLoad {
     [super viewDidLoad];
