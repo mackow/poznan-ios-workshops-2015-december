@@ -87,12 +87,17 @@
 
 - (void)updateListForLocation:(nonnull CLLocation *)location {
     [self.apiClient getVenuesNearCoordinate:location.coordinate radius:kCLLocationAccuracyKilometer query:nil categories:nil completion:^(NSArray<NGWVenue *> * _Nullable venues, NSError * _Nullable error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.locationsListVc updateCollectionWithItems:venues];
+        });
     }];
 }
 
 - (void)locateMeBarButtonDidTap:(UIBarButtonItem *)button {
     [self.locationRetriever obtainUserLocationWithCompletion:^(CLLocation * _Nullable location, NSError * _Nullable error) {
         NSLog(@"%.4f, %.4f", location.coordinate.latitude, location.coordinate.latitude);
+        [self.mapVc setCenterCoordinate:location.coordinate animated:YES];
+        [self updateListForLocation:location];
     }];
 }
 
