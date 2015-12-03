@@ -22,6 +22,7 @@
     self = [super init];
     if (self) {
         _locationManager = [[CLLocationManager alloc] init];
+        _locationManager.delegate = self;
         _locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
         _locationManager.distanceFilter = 100;
     }
