@@ -15,7 +15,7 @@
 
 @import PureLayout;
 
-@interface NGWRootViewController() <NGWMapViewControllerDelegate>
+@interface NGWRootViewController() <NGWMapViewControllerDelegate, UITextFieldDelegate>
 @property (assign, nonatomic) BOOL didSetConstraints;
 @property (strong, nonatomic, nonnull) NGWMapViewController *mapVc;
 @property (strong, nonatomic, nonnull) NGWLocationsListViewController *locationsListVc;
@@ -56,12 +56,24 @@
     [self.locationsListVc didMoveToParentViewController:self];
 }
 
+- (void) configureNavigationItem {
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"filter-icon"] style:UIBarButtonItemStylePlain target:nil action:nil];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Locate me!", nil) style:UIBarButtonItemStylePlain target:self action:@selector(locateMeBarButtonDidTap:)];
+    UITextField *textField = [[UITextField alloc] initForAutoLayout];
+    textField.borderStyle = UITextBorderStyleRoundedRect;
+    textField.returnKeyType = UIReturnKeyDone;
+    textField.delegate = self;
+    self.navigationItem.titleView = textField;
+    [textField autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:60.0f];
+    [textField autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:120.0f];
+    [textField autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self configureView];
+    [self configureNavigationItem];
     self.apiClient = [[NGWAPIClient alloc] initWithClientIdentifier:@"OJS3S0YKZRAD3KWCZ4XFU5NHNZOBDR2SGFPGV50MMERJKSED" clientSecret:@"ZWO5GWQ55ZF1CQ1ZMPPQSQISOENCPTUBMNSZDAUXAT0NBVQE"];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"filter-icon"] style:UIBarButtonItemStylePlain target:nil action:nil];
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Locate me!", nil) style:UIBarButtonItemStylePlain target:self action:@selector(locateMeBarButtonDidTap:)];
 }
 
 #pragma mark - Layout
@@ -83,10 +95,19 @@
     [super updateViewConstraints];
 }
 
+#pragma mark - Private
+
+- (UITextField*) searchTextField {
+    if (![self.navigationItem.titleView isKindOfClass:[UITextField class]]) {
+        return nil;
+    }
+    return (UITextField*) self.navigationItem.titleView;
+}
+
 #pragma mark - Handling location update
 
-- (void)updateListForLocation:(nonnull CLLocation *)location {
-    [self.apiClient getVenuesNearCoordinate:location.coordinate radius:kCLLocationAccuracyKilometer query:nil categories:nil completion:^(NSArray<NGWVenue *> * _Nullable venues, NSError * _Nullable error) {
+- (void)updateListForLocation:(nonnull CLLocation *)location query:(NSString*)query {
+    [self.apiClient getVenuesNearCoordinate:location.coordinate radius:kCLLocationAccuracyKilometer query:query categories:nil completion:^(NSArray<NGWVenue *> * _Nullable venues, NSError * _Nullable error) {
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.locationsListVc updateCollectionWithItems:venues];
         });
@@ -97,14 +118,25 @@
     [self.locationRetriever obtainUserLocationWithCompletion:^(CLLocation * _Nullable location, NSError * _Nullable error) {
         NSLog(@"%.4f, %.4f", location.coordinate.latitude, location.coordinate.latitude);
         [self.mapVc setCenterCoordinate:location.coordinate animated:YES];
-        [self updateListForLocation:location];
+        [self updateListForLocation:location query:[self searchTextField].text];
     }];
 }
 
 #pragma mark - NGWMapViewControllerDelegate
 
 - (void)mapViewController:(NGWMapViewController *)controller didChangeToLocation:(nonnull CLLocation *)location {
-    [self updateListForLocation:location];
+    [self updateListForLocation:location query:[self searchTextField].text];
 }
 
+#pragma mark - UITextFieldDelegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    [self.locationRetriever obtainUserLocationWithCompletion:^(CLLocation * _Nullable location, NSError * _Nullable error) {
+        NSLog(@"%.4f, %.4f", location.coordinate.latitude, location.coordinate.latitude);
+        [self.mapVc setCenterCoordinate:location.coordinate animated:YES];
+        [self updateListForLocation:location query:textField.text];
+    }];
+    return NO;
+}
 @end
