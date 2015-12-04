@@ -11,6 +11,7 @@
 NSString * const NGWVenueAddressStreetKey = @"Street";
 NSString * const NGWVenueAddressPostalCodeKey = @"ZIP";
 NSString * const NGWVenueAddressCountryCodeKey = @"CountryCode";
+NSString * const NGWVenueAddressCountryKey = @"Country";
 NSString * const NGWVenueAddressCityCodeKey = @"City";
 NSString * const NGWVenueAddressStateCodeKey = @"State";
 
@@ -31,6 +32,7 @@ NSString * const NGWVenueAddressStateCodeKey = @"State";
 				NGWVenueAddressStreetKey: json[@"location"][@"address"] ?: @"",
 				NGWVenueAddressPostalCodeKey: json[@"location"][@"postalCode"] ?: @"",
 				NGWVenueAddressCountryCodeKey: json[@"location"][@"cc"] ?: @"",
+                NGWVenueAddressCountryKey : json[@"location"][@"country"] ?: @"",
 				NGWVenueAddressCityCodeKey: json[@"location"][@"city"] ?: @"",
 				NGWVenueAddressStateCodeKey: json[@"location"][@"state"] ?: @""
 			}];
