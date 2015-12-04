@@ -35,6 +35,8 @@ SpecBegin(NGWLocationListManager)
 
     beforeEach(^{
         sut = [[NGWLocationListManager alloc] initWithCollectionView:cv];
+        cv.delegate = sut;
+        cv.dataSource = sut;
     });
 
     afterEach(^{
@@ -55,7 +57,7 @@ SpecBegin(NGWLocationListManager)
         
         describe(@"with 1 item or more", ^{
             beforeEach(^{
-                [sut updateCollectionWithItems:setupVenueArray(1)];
+                [sut updateCollectionWithItems:@[[OCMockObject niceMockForClass:[NGWVenue class]]]];
             });
             
             it(@"should return a valid cell", ^{
