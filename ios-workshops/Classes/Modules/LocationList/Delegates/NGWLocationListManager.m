@@ -12,6 +12,8 @@
 #import "NGWVenueCell.h"
 
 static NSString * const NGWCellReuseIdentifier = @"VenueCell";
+static CGFloat const NGWColectionViewCellHeight = 50.0f;
+static CGFloat const NGWColectionViewCellWidth = 150.0f;
 
 @interface NGWLocationListManager ()
 @property (strong, nonatomic, nullable) NSArray<NGWVenue *> *locations;
@@ -20,7 +22,7 @@ static NSString * const NGWCellReuseIdentifier = @"VenueCell";
 
 @implementation NGWLocationListManager
 
-#pragma mark - public
+#pragma mark - Public
 
 - (instancetype)initWithCollectionView:(UICollectionView *)collectionView {
     self = [super init];
@@ -56,6 +58,6 @@ static NSString * const NGWCellReuseIdentifier = @"VenueCell";
                   layout:(UICollectionViewLayout *)collectionViewLayout
   sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(150.0f, 50.0f);
+    return CGSizeMake(NGWColectionViewCellWidth, NGWColectionViewCellHeight);
 }
 @end
