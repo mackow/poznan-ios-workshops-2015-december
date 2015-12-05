@@ -122,9 +122,9 @@ NSString * const NGWAPIClientErrorDomain = @"NGWAPIClientErrorDomain";
 	NSURLRequest *request = [self URLRequestWithMethod:@"GET" URLString:@"venues/categories" queryItems:@[]];
 	[self resumeDataTaskWithRequest:request completion:^(NSDictionary<NSString *,id> *json, NSError *error) {
 		if (!error) {
-			NSArray<NGWCategory *> *venues = [NGWCategory categoriesWithJSONArray:json[@"response"][@"categories"] error:&error];
+			NSArray<NGWCategory *> *categories = [NGWCategory categoriesWithJSONArray:json[@"response"][@"categories"] error:&error];
 			if (!error) {
-				completion(venues, nil);
+				completion(categories, nil);
 			} else {
 				completion(nil, error);
 			}
