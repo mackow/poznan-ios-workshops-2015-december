@@ -36,6 +36,6 @@
 /**
  *  The receivers delegate.
  */
-@property (strong, nonatomic, nullable) id <NGWMapViewControllerDelegate> delegate;
+@property (weak, nonatomic, nullable) id <NGWMapViewControllerDelegate> delegate;
 
 @end
