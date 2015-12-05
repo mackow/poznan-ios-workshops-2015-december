@@ -11,6 +11,8 @@
 #import "NGWVenue.h"
 #import "NGWVenueCell.h"
 
+static NSString * const NGWCellReuseIdentifier = @"VenueCell";
+
 @interface NGWLocationListManager ()
 @property (strong, nonatomic, nullable) NSArray<NGWVenue *> *locations;
 @property (weak, nonatomic, nullable) UICollectionView *collectionView;
@@ -24,7 +26,7 @@
     self = [super init];
     if (self) {
         _collectionView = collectionView;
-        [self.collectionView registerClass:[NGWVenueCell class] forCellWithReuseIdentifier:@"VenueCell"];
+        [self.collectionView registerClass:[NGWVenueCell class] forCellWithReuseIdentifier:NGWCellReuseIdentifier];
     }
     return self;
 }
@@ -45,7 +47,7 @@
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    NGWVenueCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"VenueCell" forIndexPath:indexPath];
+    NGWVenueCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NGWCellReuseIdentifier forIndexPath:indexPath];
     cell.venue = [self.locations objectAtIndex:indexPath.row];
     return cell;
 }

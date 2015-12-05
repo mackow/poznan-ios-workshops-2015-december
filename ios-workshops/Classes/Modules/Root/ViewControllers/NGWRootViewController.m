@@ -8,20 +8,22 @@
 
 #import "NGWRootViewController.h"
 
+#import "NGWAPIClient.h"
+#import "NGWCategoriesListViewController.h"
 #import "NGWMapViewController.h"
 #import "NGWLocationsListViewController.h"
-#import "NGWAPIClient.h"
 #import "NGWLocationRetriever.h"
+#import "NGWSelectCategoryDelegate.h"
 
 @import PureLayout;
 
-@interface NGWRootViewController() <NGWMapViewControllerDelegate, UITextFieldDelegate>
+@interface NGWRootViewController() <NGWMapViewControllerDelegate, NGWSelectCategoryDelegate, UITextFieldDelegate>
 @property (assign, nonatomic) BOOL didSetConstraints;
 @property (strong, nonatomic, nonnull) NGWMapViewController *mapVc;
 @property (strong, nonatomic, nonnull) NGWLocationsListViewController *locationsListVc;
 @property (strong, nonatomic, nonnull) NGWAPIClient *apiClient;
 @property (strong, nonatomic, nonnull) NGWLocationRetriever *locationRetriever;
-
+@property (strong, nonatomic, nullable) NSArray *selectedCategories;
 @end
 
 @implementation NGWRootViewController
@@ -57,7 +59,7 @@
 }
 
 - (void) configureNavigationItem {
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"filter-icon"] style:UIBarButtonItemStylePlain target:nil action:nil];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"filter-icon"] style:UIBarButtonItemStylePlain target:self action:@selector(filterBarButtonDidTap:)];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Locate me!", nil) style:UIBarButtonItemStylePlain target:self action:@selector(locateMeBarButtonDidTap:)];
     UITextField *textField = [[UITextField alloc] initForAutoLayout];
     textField.borderStyle = UITextBorderStyleRoundedRect;
@@ -106,8 +108,8 @@
 
 #pragma mark - Handling location update
 
-- (void)updateListForLocation:(nonnull CLLocation *)location query:(NSString*)query {
-    [self.apiClient getVenuesNearCoordinate:location.coordinate radius:kCLLocationAccuracyKilometer query:query categories:nil completion:^(NSArray<NGWVenue *> * _Nullable venues, NSError * _Nullable error) {
+- (void)updateListForLocation:(nonnull CLLocation *)location query:(nullable NSString*)query categories:(nullable NSArray*)categories {
+    [self.apiClient getVenuesNearCoordinate:location.coordinate radius:kCLLocationAccuracyKilometer query:query categories:categories completion:^(NSArray<NGWVenue *> * _Nullable venues, NSError * _Nullable error) {
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.locationsListVc updateCollectionWithItems:venues];
         });
@@ -118,14 +120,48 @@
     [self.locationRetriever obtainUserLocationWithCompletion:^(CLLocation * _Nullable location, NSError * _Nullable error) {
         NSLog(@"%.4f, %.4f", location.coordinate.latitude, location.coordinate.latitude);
         [self.mapVc setCenterCoordinate:location.coordinate animated:YES];
-        [self updateListForLocation:location query:[self searchTextField].text];
+        [self updateListForLocation:location query:[self searchTextField].text categories:self.selectedCategories];
+    }];
+}
+
+- (void)filterBarButtonDidTap:(UIBarButtonItem *)button {
+    NGWCategoriesListViewController *categoryListViewController = [NGWCategoriesListViewController new];
+    categoryListViewController.selectCategoryDelegate = self;
+    categoryListViewController.title = NSLocalizedString(@"Category", nil);
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:categoryListViewController];
+    navigationController.modalPresentationStyle = UIModalPresentationFullScreen;
+    navigationController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+    [self presentViewController:navigationController animated:YES completion:^{
+        [self.apiClient getCategoriesWithCompletion:^(NSArray<NGWCategory *> * _Nullable categories, NSError * _Nullable error) {
+            dispatch_async(dispatch_get_main_queue(), ^ {
+                [categoryListViewController updateTableWithItems:categories];
+            });
+        }];
     }];
 }
 
 #pragma mark - NGWMapViewControllerDelegate
 
 - (void)mapViewController:(NGWMapViewController *)controller didChangeToLocation:(nonnull CLLocation *)location {
-    [self updateListForLocation:location query:[self searchTextField].text];
+    [self updateListForLocation:location query:[self searchTextField].text categories:self.selectedCategories];
+}
+
+#pragma mark - NGWSelectCategoryDelegate
+
+- (void)selectCategory:(NGWCategory*)category {
+    if (!category) {
+        self.selectedCategories = nil;
+        self.navigationItem.rightBarButtonItem.tintColor = nil;
+    }
+    else {
+        self.navigationItem.rightBarButtonItem.tintColor = [UIColor blackColor];
+        self.selectedCategories = @[category];
+    }
+    [self.locationRetriever obtainUserLocationWithCompletion:^(CLLocation * _Nullable location, NSError * _Nullable error) {
+        NSLog(@"%.4f, %.4f", location.coordinate.latitude, location.coordinate.latitude);
+        [self.mapVc setCenterCoordinate:location.coordinate animated:YES];
+        [self updateListForLocation:location query:[self searchTextField].text categories:self.selectedCategories];
+    }];
 }
 
 #pragma mark - UITextFieldDelegate
@@ -135,7 +171,7 @@
     [self.locationRetriever obtainUserLocationWithCompletion:^(CLLocation * _Nullable location, NSError * _Nullable error) {
         NSLog(@"%.4f, %.4f", location.coordinate.latitude, location.coordinate.latitude);
         [self.mapVc setCenterCoordinate:location.coordinate animated:YES];
-        [self updateListForLocation:location query:textField.text];
+        [self updateListForLocation:location query:textField.text categories:self.selectedCategories];
     }];
     return NO;
 }

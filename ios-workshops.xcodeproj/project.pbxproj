@@ -43,6 +43,9 @@
 		E1D586951BF4ABB500461193 /* NGWLocationListManagerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D586931BF4ABB500461193 /* NGWLocationListManagerSpec.m */; };
 		E85A64D84055BB7A88C8EBEA /* Pods_ios_workshopsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D52493212E37AD064DD1CC59 /* Pods_ios_workshopsTests.framework */; };
 		F047A36D1C10EF6D00ADBDC1 /* NGWVenueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F047A36C1C10EF6D00ADBDC1 /* NGWVenueCell.m */; };
+		F0CE3FC71C12FFEA0006660D /* NGWCategoriesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CE3FC61C12FFEA0006660D /* NGWCategoriesListViewController.m */; };
+		F0CE3FCA1C13005D0006660D /* NGWCategoryListManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CE3FC91C13005D0006660D /* NGWCategoryListManager.m */; };
+		F0CE3FCD1C130DE50006660D /* NGWCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CE3FCC1C130DE50006660D /* NGWCategoryCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +108,13 @@
 		E1D586931BF4ABB500461193 /* NGWLocationListManagerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGWLocationListManagerSpec.m; sourceTree = "<group>"; };
 		F047A36B1C10EF6D00ADBDC1 /* NGWVenueCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGWVenueCell.h; sourceTree = "<group>"; };
 		F047A36C1C10EF6D00ADBDC1 /* NGWVenueCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGWVenueCell.m; sourceTree = "<group>"; };
+		F0AA21021C1353160005395A /* NGWSelectCategoryDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGWSelectCategoryDelegate.h; sourceTree = "<group>"; };
+		F0CE3FC51C12FFEA0006660D /* NGWCategoriesListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGWCategoriesListViewController.h; sourceTree = "<group>"; };
+		F0CE3FC61C12FFEA0006660D /* NGWCategoriesListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGWCategoriesListViewController.m; sourceTree = "<group>"; };
+		F0CE3FC81C13005D0006660D /* NGWCategoryListManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGWCategoryListManager.h; sourceTree = "<group>"; };
+		F0CE3FC91C13005D0006660D /* NGWCategoryListManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGWCategoryListManager.m; sourceTree = "<group>"; };
+		F0CE3FCB1C130DE50006660D /* NGWCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGWCategoryCell.h; sourceTree = "<group>"; };
+		F0CE3FCC1C130DE50006660D /* NGWCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGWCategoryCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +239,7 @@
 		E121E42A1BE9556F0094C2AB /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				F0CE3FC11C12FB9B0006660D /* CategoryList */,
 				E121E47C1BED59670094C2AB /* Common */,
 				E121E43B1BEB83160094C2AB /* LocationList */,
 				E121E4401BEB83160094C2AB /* Map */,
@@ -338,6 +349,44 @@
 				F047A36C1C10EF6D00ADBDC1 /* NGWVenueCell.m */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		F0CE3FC11C12FB9B0006660D /* CategoryList */ = {
+			isa = PBXGroup;
+			children = (
+				F0CE3FC31C12FF760006660D /* Cells */,
+				F0CE3FC41C12FFAC0006660D /* Delegates */,
+				F0CE3FC21C12FF610006660D /* ViewControllers */,
+			);
+			path = CategoryList;
+			sourceTree = "<group>";
+		};
+		F0CE3FC21C12FF610006660D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F0CE3FC51C12FFEA0006660D /* NGWCategoriesListViewController.h */,
+				F0CE3FC61C12FFEA0006660D /* NGWCategoriesListViewController.m */,
+				F0AA21021C1353160005395A /* NGWSelectCategoryDelegate.h */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F0CE3FC31C12FF760006660D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F0CE3FCB1C130DE50006660D /* NGWCategoryCell.h */,
+				F0CE3FCC1C130DE50006660D /* NGWCategoryCell.m */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		F0CE3FC41C12FFAC0006660D /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				F0CE3FC81C13005D0006660D /* NGWCategoryListManager.h */,
+				F0CE3FC91C13005D0006660D /* NGWCategoryListManager.m */,
+			);
+			path = Delegates;
 			sourceTree = "<group>";
 		};
 		F6166F905A07DF6816E33D3D /* Pods */ = {
@@ -564,10 +613,13 @@
 				F047A36D1C10EF6D00ADBDC1 /* NGWVenueCell.m in Sources */,
 				E1B052491BF0D64300E56BBF /* NGWLocationListManager.m in Sources */,
 				E121E4041BE79E450094C2AB /* AppDelegate.m in Sources */,
+				F0CE3FC71C12FFEA0006660D /* NGWCategoriesListViewController.m in Sources */,
+				F0CE3FCA1C13005D0006660D /* NGWCategoryListManager.m in Sources */,
 				E121E4801BED59670094C2AB /* NGWVenue.m in Sources */,
 				E1B052451BF0BEAA00E56BBF /* NGWCoreDataStack.m in Sources */,
 				E121E4011BE79E450094C2AB /* main.m in Sources */,
 				3A8FF4FE1BECFCDC00CBEB25 /* NGWAPIClient.m in Sources */,
+				F0CE3FCD1C130DE50006660D /* NGWCategoryCell.m in Sources */,
 				E121E44E1BEB83160094C2AB /* NGWRootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -654,6 +706,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -691,6 +744,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -708,6 +762,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "co.netguru.internal.ios-workshops";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -723,6 +778,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "co.netguru.internal.ios-workshops";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

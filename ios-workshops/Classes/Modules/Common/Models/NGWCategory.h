@@ -32,11 +32,19 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic, readonly) NSString *identifier;
 
 /// The name of the category.
-@property (weak, nonatomic, readonly) NSString *name;
+@property (strong, nonatomic, readonly) NSString *name;
 
-/// The array of sub-categories.
-@property (strong, nonatomic, readonly) NSArray<NGWCategory *> *childCategories;
+/// The image icon of the category.
+@property (strong, nonatomic, readonly) NSData *image;
 
 NS_ASSUME_NONNULL_END
+
+@end
+
+#pragma mark -
+
+@interface NGWCategory (Unavailable)
+
+- (nullable instancetype)init NS_UNAVAILABLE;
 
 @end
